@@ -1,16 +1,11 @@
 extends KinematicBody2D
 
 
-#establish scene name for saving
-
-#keep the raycasts in a group - to fall for later
-onready var raycasts = {
-	"floor": [$floor1, $floor2, $floor3],
-}
 
 #player's current physics numbers
 export (int) var speed = 500
 export (int) var gravity = 2800
+export (float, 0, 1.0) var wgravity = 500
 
 export (float, 0, 1.0) var friction = 0.4
 export (float, 0, 1.0) var acceleration = 0.20
@@ -19,10 +14,16 @@ export (float, 0, 1.0) var jumpheight = 140
 export (float, 0, 1.0) var jumpinc = 0.74
 export (float, 0, 1.0) var jgravity = 350
 
+export (float, 0, 1.0) var climbspeed = 300
+
+
+
 #setting up ground variables
 var velocity = Vector2.ZERO
 var curforce = jumpheight
 var jumping = false
+var climbing = false
+var wall = false
 
 
 var playerpause = false
@@ -30,6 +31,8 @@ var curphy:String
 
 var focused = false
 
+
+onready var raycasts = {}
 
 onready var anim = $AnimationTree.get("parameters/playback")
 onready var base = get_node("/root/ale")

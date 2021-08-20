@@ -6,6 +6,11 @@ export var scene_id = "soweli"
 
 #physics modes with numbers
 
+func _ready():
+	raycasts = {
+		"floor": [$floor1, $floor2, $floor3],
+	}
+
 func get_input(delta):
 		
 	#settle these variables first

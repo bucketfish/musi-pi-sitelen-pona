@@ -5,11 +5,18 @@ extends "res://lon tawa/tawa.gd"
 export var scene_id = "kije"
 
 #physics modes with numbers
+func _ready():
+	raycasts = {
+		"floor": [$floor1, $floor2, $floor3],
+		"left": [$climbl1, $climbl2, $climbl3],
+		"right": [$climbr1, $climbr2, $climbr3],
+	}
 
 func get_input(delta):
 		
 	#settle these variables first
 	var onfloor = raycast("floor")
+	wall = raycast("left") || raycast("right")
 	
 	
 	#direction of player
@@ -35,21 +42,9 @@ func get_input(delta):
 	
 	$Label.text = str(onfloor)
 	if Input.is_action_pressed("jump"):
-		if onfloor:
-			jumping = true
+		if wall:
+			velocity.y = -climbspeed
 		
-		#jumping
-		if jumping:
-			velocity.y = velocity.y - curforce
-			#velocity.y = clamp(velocity.y - curforce, -800, 10000000)
-			curforce = curforce * jumpinc
-			$Label.text = str(curforce) + " " + str(jumpinc) + " " + str(curforce*jumpinc)
-		
-	
-	
-	#reseting values when hitting floor
-	if onfloor:
-		curforce = jumpheight
 		
 	#left + right movement
 	if Input.is_action_pressed("right"):
@@ -70,7 +65,10 @@ func get_input(delta):
 func _physics_process(delta):
 	if focused:
 		get_input(delta)
-	velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
+	if wall:
+		velocity.y = clamp(velocity.y + wgravity * delta, -1500, 200)
+	else:
+		velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP )
 	

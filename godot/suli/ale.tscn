@@ -6,9 +6,9 @@
 [ext_resource path="res://suli/ale.gd" type="Script" id=4]
 [ext_resource path="res://lon tawa/kije.tscn" type="PackedScene" id=5]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
 
 [node name="ale" type="Node2D"]
 script = ExtResource( 4 )
@@ -18,11 +18,11 @@ script = ExtResource( 4 )
 [node name="kije" parent="." instance=ExtResource( 5 )]
 position = Vector2( 327.142, 402.75 )
 
-[node name="RemoteTransform2D" parent="kije" index="6"]
+[node name="RemoteTransform2D" parent="kije" index="12"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="AnimationTree" parent="kije" index="8"]
-parameters/playback = SubResource( 2 )
+[node name="AnimationTree" parent="kije" index="14"]
+parameters/playback = SubResource( 1 )
 
 [node name="soweli" parent="." instance=ExtResource( 2 )]
 position = Vector2( 515.968, 402.75 )
@@ -31,7 +31,7 @@ position = Vector2( 515.968, 402.75 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="AnimationTree" parent="soweli" index="8"]
-parameters/playback = SubResource( 1 )
+parameters/playback = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 327.142, 402.75 )
