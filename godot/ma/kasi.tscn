@@ -30,9 +30,9 @@ points = PoolVector2Array( 210, 180, 0, 180, 0, 0, 210, 0 )
 
 [node name="kasi" type="TileMap"]
 modulate = Color( 0, 0, 0, 1 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.25, 0.25 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 210, 180 )
-collision_layer = 2
-collision_mask = 3
+collision_layer = 0
+collision_mask = 0
 format = 1

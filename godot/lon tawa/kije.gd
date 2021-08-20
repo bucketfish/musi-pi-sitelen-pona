@@ -2,7 +2,7 @@ extends "res://lon tawa/tawa.gd"
 
 
 #establish scene name for saving
-export var scene_id = "soweli"
+export var scene_id = "kije"
 
 #physics modes with numbers
 
