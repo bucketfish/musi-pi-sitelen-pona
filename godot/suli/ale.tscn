@@ -9,8 +9,24 @@
 
 [node name="TileMap" parent="tomo" index="0"]
 collision_layer = 3
+tile_data = PoolIntArray( 262131, 0, 0, 262132, 0, 0, 262133, 0, 0, 262134, 0, 0, 262135, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 393213, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327698, 0, 0, 393229, 0, 0, 393232, 0, 0, 393233, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0 )
 
 [node name="soweli" parent="." instance=ExtResource( 2 )]
-position = Vector2( 514.183, 301.913 )
+position = Vector2( 515.968, 434.031 )
+
+[node name="RemoteTransform2D" parent="soweli" index="6"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 515.968, 434.031 )
+offset = Vector2( 0, -100 )
+current = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.5
+drag_margin_right = 0.5
+drag_margin_bottom = 0.0
 
 [editable path="tomo"]
+[editable path="soweli"]

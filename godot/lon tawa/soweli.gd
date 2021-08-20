@@ -7,13 +7,13 @@ export var scene_id = "soweli"
 #physics modes with numbers
 var physics = {
 	"air": {
-		"speed": 700,
+		"speed": 500,
 		"gravity": 2800,
 		"friction": 0.4,
 		"acceleration": 0.20,
-		"jumpheight": 240,
+		"jumpheight": 140,
 		"jumpinc": 0.74,
-		"jgravity": 550
+		"jgravity": 350
 	}
 }
 
