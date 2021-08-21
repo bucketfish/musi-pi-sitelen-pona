@@ -34,7 +34,7 @@ remote_path = NodePath("../../Camera2D")
 parameters/playback = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 391.863, 516.578 )
+position = Vector2( 37.8281, 511.836 )
 offset = Vector2( 0, -100 )
 current = true
 drag_margin_v_enabled = true

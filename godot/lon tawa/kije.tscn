@@ -4,7 +4,7 @@
 [ext_resource path="res://lon tawa/kije.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 52, 48 )
+extents = Vector2( 42.2655, 38.4835 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
@@ -67,7 +67,7 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 1 )
 
 [node name="collision box" type="CollisionShape2D" parent="."]
@@ -79,13 +79,13 @@ cast_to = Vector2( 0, 55 )
 collision_mask = 2
 
 [node name="floor2" type="RayCast2D" parent="."]
-position = Vector2( -47, 0 )
+position = Vector2( -38, 0 )
 enabled = true
 cast_to = Vector2( 0, 55 )
 collision_mask = 2
 
 [node name="floor3" type="RayCast2D" parent="."]
-position = Vector2( 47, 0 )
+position = Vector2( 38, 0 )
 enabled = true
 cast_to = Vector2( 0, 55 )
 collision_mask = 2
@@ -96,13 +96,13 @@ cast_to = Vector2( -55, 0 )
 collision_mask = 2
 
 [node name="climbl2" type="RayCast2D" parent="."]
-position = Vector2( 0, -45 )
+position = Vector2( 0, -38 )
 enabled = true
 cast_to = Vector2( -55, 0 )
 collision_mask = 2
 
 [node name="climbl3" type="RayCast2D" parent="."]
-position = Vector2( 0, 45 )
+position = Vector2( 0, 38 )
 enabled = true
 cast_to = Vector2( -55, 0 )
 collision_mask = 2
@@ -113,13 +113,13 @@ cast_to = Vector2( 55, 0 )
 collision_mask = 2
 
 [node name="climbr2" type="RayCast2D" parent="."]
-position = Vector2( 0, -45 )
+position = Vector2( 0, -38 )
 enabled = true
 cast_to = Vector2( 55, 0 )
 collision_mask = 2
 
 [node name="climbr3" type="RayCast2D" parent="."]
-position = Vector2( 0, 45 )
+position = Vector2( 0, 38 )
 enabled = true
 cast_to = Vector2( 55, 0 )
 collision_mask = 2
