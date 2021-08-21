@@ -42,7 +42,7 @@ func _input(event):
 		change_focus()
 
 func kije_climb():
-	change_focus()
 	$soweli.kije_climb(true)
 	kije_climbing = true
+	change_focus("soweli")
 	

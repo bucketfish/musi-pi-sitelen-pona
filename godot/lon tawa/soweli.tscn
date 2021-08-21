@@ -99,6 +99,12 @@ enabled = true
 cast_to = Vector2( 0, 55 )
 collision_mask = 2
 
+[node name="dig" type="RayCast2D" parent="."]
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 70, 0 )
+collision_mask = 2
+
 [node name="Label" type="Label" parent="."]
 visible = false
 margin_right = 40.0

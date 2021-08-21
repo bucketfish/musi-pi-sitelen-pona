@@ -49,11 +49,11 @@ func get_input(delta):
 	if Input.is_action_pressed("jump"):
 		if wall:
 			velocity.y = -climbspeed
-		if raycast_climb("right") || raycast_climb("left"):
+		if raycast_climb("right") || raycast_climb("left") || raycast_climb("floor"):
 			emit_signal("climb")
 			queue_free()
 			
-		
+
 	#left + right movement
 	if Input.is_action_pressed("right"):
 		$Sprite.set_flip_h(false)

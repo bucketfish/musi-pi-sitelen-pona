@@ -10,6 +10,7 @@ func _ready():
 	raycasts = {
 		"floor": [$floor1, $floor2, $floor3],
 	}
+	
 
 
 func get_input(delta):
@@ -36,10 +37,8 @@ func get_input(delta):
 		if velocity.y < 0:
 			velocity.y += jgravity
 		jumping = false
-			
-	#normal jumping
 	
-	$Label.text = str(onfloor)
+	# normal jumping
 	if Input.is_action_pressed("jump"):
 		if onfloor:
 			jumping = true
@@ -49,13 +48,46 @@ func get_input(delta):
 			velocity.y = velocity.y - curforce
 			#velocity.y = clamp(velocity.y - curforce, -800, 10000000)
 			curforce = curforce * jumpinc
-			$Label.text = str(curforce) + " " + str(jumpinc) + " " + str(curforce*jumpinc)
-		
-	
+
 	
 	#reseting values when hitting floor
 	if onfloor:
 		curforce = jumpheight
+		
+		
+			
+
+		
+	if Input.is_action_pressed("down"):
+		$dig.rotation_degrees = 90
+		
+	elif Input.is_action_pressed("up"):
+		$dig.rotation_degrees = 270
+	
+	elif Input.is_action_pressed("right"):
+		$dig.rotation_degrees = 0
+		
+	elif Input.is_action_pressed("left"):
+		$dig.rotation_degrees = 180
+	
+	#if $dig.is_colliding():
+		#$Label.text = str($dig.get_collision_point())
+		#$Label.text = str(Vector2(floor($dig.get_collision_point().x / 92), floor($dig.get_collision_point().y / 92)))
+		
+	if Input.is_action_just_pressed("ability"):
+		if $dig.is_colliding():
+			if $dig.get_collider().is_in_group("kenpakala"):
+				var loc = $dig.get_collision_point()
+				if $dig.rotation_degrees == 180 || $dig.rotation_degrees == 270:
+					loc.x -= 1
+					loc.y -= 1
+				
+				loc.x = floor(loc.x/ 96)
+				loc.y = floor(loc.y / 96)
+
+				$"../tomo/ma".set_cellv(loc, -1)
+		
+	
 		
 	#left + right movement
 	if Input.is_action_pressed("right"):
@@ -65,6 +97,8 @@ func get_input(delta):
 	elif Input.is_action_pressed("left"):
 		$Sprite.set_flip_h(true)
 		$Sprite/kije.set_flip_h(true)
+		
+
 	
 	#animation
 	if jumping:
