@@ -11,6 +11,7 @@ func _ready():
 		"floor": [$floor1, $floor2, $floor3],
 	}
 
+
 func get_input(delta):
 		
 	#settle these variables first
@@ -59,9 +60,11 @@ func get_input(delta):
 	#left + right movement
 	if Input.is_action_pressed("right"):
 		$Sprite.set_flip_h(false)
+		$Sprite/kije.set_flip_h(false)
 
 	elif Input.is_action_pressed("left"):
 		$Sprite.set_flip_h(true)
+		$Sprite/kije.set_flip_h(true)
 	
 	#animation
 	if jumping:
@@ -80,3 +83,8 @@ func _physics_process(delta):
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP )
 	
 	
+func kije_climb(val):
+	if val == true:
+		$Sprite/kije.visible = true
+	else:
+		$Sprite/kije.visible = false

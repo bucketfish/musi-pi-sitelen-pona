@@ -3,6 +3,7 @@ extends "res://lon tawa/tawa.gd"
 
 #establish scene name for saving
 export var scene_id = "kije"
+signal climb
 
 #physics modes with numbers
 func _ready():
@@ -11,12 +12,16 @@ func _ready():
 		"left": [$climbl1, $climbl2, $climbl3],
 		"right": [$climbr1, $climbr2, $climbr3],
 	}
+	connect("climb", get_parent(), "kije_climb")
 
 func get_input(delta):
 		
 	#settle these variables first
 	var onfloor = raycast("floor")
-	wall = raycast("left") || raycast("right")
+	var wall_l = raycast("left") && Input.is_action_pressed("left")
+	var wall_r = raycast("right") && Input.is_action_pressed("right")
+	wall = wall_l || wall_r
+	
 	
 	
 	#direction of player
@@ -40,11 +45,14 @@ func get_input(delta):
 			
 	#normal jumping
 	
-	$Label.text = str(onfloor)
+	
 	if Input.is_action_pressed("jump"):
 		if wall:
 			velocity.y = -climbspeed
-		
+		if raycast_climb("right") || raycast_climb("left"):
+			emit_signal("climb")
+			queue_free()
+			
 		
 	#left + right movement
 	if Input.is_action_pressed("right"):
@@ -72,4 +80,11 @@ func _physics_process(delta):
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
 	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP )
 	
+	
+func raycast_climb(area):
+	for i in raycasts[area]:
+		if i.is_colliding():
+			if i.get_collider().is_in_group("soweli"):
+				return true
+	return false
 	

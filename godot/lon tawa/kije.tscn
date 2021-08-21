@@ -58,7 +58,9 @@ start_node = "idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
-[node name="kije" type="KinematicBody2D"]
+[node name="kije" type="KinematicBody2D" groups=[
+"kije",
+]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 2 )
