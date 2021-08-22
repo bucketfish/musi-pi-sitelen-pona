@@ -7,11 +7,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 52, 45 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 44, 40 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "idle"
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -25,8 +24,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "walk"
+[sub_resource type="Animation" id=4]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -42,25 +40,25 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=4]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=5]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "walk"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=6]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=7]
 
-[sub_resource type="AnimationNodeStateMachine" id=8]
-states/idle/node = SubResource( 4 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachine" id=9]
+states/idle/node = SubResource( 5 )
 states/idle/position = Vector2( 201.5, 102.5 )
-states/walk/node = SubResource( 5 )
+states/walk/node = SubResource( 6 )
 states/walk/position = Vector2( 401, 89.5 )
-transitions = [ "idle", "walk", SubResource( 6 ), "walk", "idle", SubResource( 7 ) ]
+transitions = [ "idle", "walk", SubResource( 7 ), "walk", "idle", SubResource( 8 ) ]
 start_node = "idle"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
 [node name="soweli" type="KinematicBody2D" groups=[
 "soweli",
@@ -85,7 +83,7 @@ shape = SubResource( 1 )
 
 [node name="kije" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -82.3811 )
-shape = SubResource( 10 )
+shape = SubResource( 2 )
 
 [node name="floor1" type="RayCast2D" parent="."]
 enabled = true
@@ -125,10 +123,10 @@ update_scale = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
-anims/idle = SubResource( 2 )
-anims/walk = SubResource( 3 )
+anims/idle = SubResource( 3 )
+anims/walk = SubResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 8 )
+tree_root = SubResource( 9 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 9 )
+parameters/playback = SubResource( 10 )

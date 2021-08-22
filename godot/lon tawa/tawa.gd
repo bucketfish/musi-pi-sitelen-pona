@@ -15,7 +15,7 @@ export (float, 0, 1.0) var jumpinc = 0.74
 export (float, 0, 1.0) var jgravity = 350
 
 export (float, 0, 1.0) var climbspeed = 300
-
+export (int, 0, 200) var inertia = 100
 
 
 #setting up ground variables

@@ -10,6 +10,7 @@ func _ready():
 	raycasts = {
 		"floor": [$floor1, $floor2, $floor3],
 	}
+	kije_climb(false)
 	
 
 
@@ -114,7 +115,12 @@ func _physics_process(delta):
 		get_input(delta)
 	velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
-	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP )
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
+	
+	for i in get_slide_count():
+		var col = get_slide_collision(i)
+		if col.collider.is_in_group("push"):
+			col.collider.apply_central_impulse(-col.normal * inertia)
 	
 	
 func kije_climb(val):

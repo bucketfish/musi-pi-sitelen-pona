@@ -27,10 +27,10 @@ parameters/playback = SubResource( 1 )
 [node name="soweli" parent="." instance=ExtResource( 2 )]
 position = Vector2( 391.863, 516.578 )
 
-[node name="RemoteTransform2D" parent="soweli" index="7"]
+[node name="RemoteTransform2D" parent="soweli" index="8"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="AnimationTree" parent="soweli" index="9"]
+[node name="AnimationTree" parent="soweli" index="10"]
 parameters/playback = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
