@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2260.19, 10 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "blingbling"
 length = 0.6
 loop = true
@@ -92,7 +92,6 @@ tracks/2/keys = {
 }
 
 [node name="tomo" instance=ExtResource( 1 )]
-modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 6 )
 
 [node name="kasi" parent="." index="0"]
@@ -134,7 +133,7 @@ ijo_id = "kasi"
 texture = ExtResource( 2 )
 
 [node name="AnimationPlayer" parent="ijo2" index="2"]
-anims/blingbling = SubResource( 4 )
+anims/blingbling = SubResource( 2 )
 
 [node name="leko" parent="." index="7" instance=ExtResource( 7 )]
 position = Vector2( 79.4517, 376.46 )
@@ -145,8 +144,9 @@ anims/lon = SubResource( 3 )
 [node name="sep" type="CanvasLayer" parent="." index="9"]
 follow_viewport_enable = true
 
-[node name="Sprite" type="Sprite" parent="sep" index="0"]
-visible = false
+[node name="Sprite" type="Sprite" parent="sep" index="0" groups=[
+"color-inv",
+]]
 position = Vector2( 460.467, 298.57 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
