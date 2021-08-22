@@ -1,8 +1,15 @@
 extends Node
 
 var sona = {
-	"jo": [],
+	"jo": ["nena"],
 	"supa": "",
+}
+
+var nasin = {
+	"kule":{
+		"linja": "#add8ff",
+		"monsi": "#454545"
+	}
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +18,21 @@ func _ready():
 		_start()
 	else:
 		_load()
+		
+	if not File.new().file_exists("user://nasin.lipu"):
+		_start()
+	else:
+		_load()
+		
+	VisualServer.set_default_clear_color(nasin["kule"]["monsi"])
+	
+
+func set_color(node):
+	if node.is_in_group("color"):
+		node.modulate = nasin["kule"]["linja"]
+	elif node.is_in_group("color-inv"):
+		node.modulate = nasin["kule"]["monsi"]
+
 
 func _save():
 	var saves = File.new()

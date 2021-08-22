@@ -61,6 +61,7 @@ start_node = "idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=10]
 
 [node name="soweli" type="KinematicBody2D" groups=[
+"color",
 "lon tawa",
 "soweli",
 ]]

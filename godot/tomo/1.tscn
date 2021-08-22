@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tomo/tomo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ma/kasi.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ante/hole.png" type="Texture" id=5]
 [ext_resource path="res://tomo/1.gd" type="Script" id=6]
 [ext_resource path="res://ijo lon ma/leko.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ante/color.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2260.19, 10 )
@@ -150,6 +151,7 @@ follow_viewport_enable = true
 position = Vector2( 460.467, 298.57 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
+script = ExtResource( 8 )
 
 [connection signal="jo" from="ijo" to="." method="_on_ijo_jo"]
 [connection signal="jo" from="ijo2" to="." method="_on_ijo_jo"]

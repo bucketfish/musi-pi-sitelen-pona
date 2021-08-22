@@ -59,6 +59,7 @@ start_node = "idle"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
 [node name="kije" type="KinematicBody2D" groups=[
+"color",
 "kije",
 "lon tawa",
 ]]
