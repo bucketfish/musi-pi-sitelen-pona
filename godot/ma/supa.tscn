@@ -11,10 +11,10 @@ points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=50]
 points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=51]
 points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=6]
@@ -191,13 +191,13 @@ points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 "autotile_coord": Vector2( 3, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 50 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 51 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 0 ),
@@ -461,7 +461,6 @@ points = PoolVector2Array( 12, 12, 0, 12, 0, 0, 12, 0 )
 0/z_index = 0
 
 [node name="lon" type="TileMap"]
-modulate = Color( 0, 0, 0, 1 )
 scale = Vector2( 8, 8 )
 tile_set = SubResource( 49 )
 cell_size = Vector2( 12, 12 )

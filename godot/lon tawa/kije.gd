@@ -12,7 +12,7 @@ func _ready():
 		"left": [$climbl1, $climbl2, $climbl3],
 		"right": [$climbr1, $climbr2, $climbr3],
 	}
-	connect("climb", get_parent(), "kije_climb")
+	connect("climb", get_parent().get_parent(), "kije_climb")
 	inertia = 10
 
 func get_input(delta):

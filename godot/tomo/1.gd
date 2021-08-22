@@ -8,7 +8,12 @@ extends "res://tomo/tomo.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Sprite.visible = true
+	if !("lon" in persistent.sona["jo"]):
+		$sep/Sprite.visible = true
+		$"../tawa/soweli".floating = true
+	else:
+		$sep/Sprite.visible = false
+		$"../tawa/soweli".floating = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

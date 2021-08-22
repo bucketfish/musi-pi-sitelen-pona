@@ -18,22 +18,22 @@ func change_focus(thing=""):
 
 		if kije_climbing:
 			var new = kije.instance()
-			new.position = $soweli.position
+			new.position = $tawa/soweli.position
 			new.position.y -= 48
 			
-			add_child(new)
-			$soweli.kije_climb(false)
+			$tawa.add_child(new)
+			$tawa/soweli.kije_climb(false)
 			kije_climbing = false
 			
 		focus = "kije"
-		$soweli.focus(false)
-		$kije.focus(true)
+		$tawa/soweli.focus(false)
+		$tawa/kije.focus(true)
 		
 	else:
 		focus = "soweli"
-		$soweli.focus(true)
+		$tawa/soweli.focus(true)
 		if !kije_climbing:
-			$kije.focus(false)
+			$tawa/kije.focus(false)
 
 		
 func _input(event):
@@ -41,7 +41,7 @@ func _input(event):
 		change_focus()
 
 func kije_climb():
-	$soweli.kije_climb(true)
+	$tawa/soweli.kije_climb(true)
 	kije_climbing = true
 	change_focus("soweli")
 	
