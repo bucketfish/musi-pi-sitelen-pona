@@ -5,7 +5,7 @@
 [ext_resource path="res://lon tawa/kije.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 52, 45 )
+extents = Vector2( 47, 45 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 44, 40 )
@@ -92,13 +92,13 @@ cast_to = Vector2( 0, 55 )
 collision_mask = 2
 
 [node name="floor2" type="RayCast2D" parent="."]
-position = Vector2( -47, 0 )
+position = Vector2( -45, 0 )
 enabled = true
 cast_to = Vector2( 0, 55 )
 collision_mask = 2
 
 [node name="floor3" type="RayCast2D" parent="."]
-position = Vector2( 47, 0 )
+position = Vector2( 45, 0 )
 enabled = true
 cast_to = Vector2( 0, 55 )
 collision_mask = 2

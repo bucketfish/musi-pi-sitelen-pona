@@ -11,7 +11,7 @@ var kije = preload("res://lon tawa/kije.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	yield(get_tree().create_timer(0.5), "timeout")
-	change_focus()
+	change_focus("soweli")
 
 func change_focus(thing=""):
 	if (thing == "" && focus == "soweli") || thing == "kije":

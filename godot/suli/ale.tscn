@@ -25,7 +25,7 @@ remote_path = NodePath("../../Camera2D")
 parameters/playback = SubResource( 1 )
 
 [node name="soweli" parent="." instance=ExtResource( 2 )]
-position = Vector2( 391.863, 516.578 )
+position = Vector2( 238.44, 299.146 )
 
 [node name="RemoteTransform2D" parent="soweli" index="8"]
 remote_path = NodePath("../../Camera2D")
@@ -58,5 +58,7 @@ texture = ExtResource( 3 )
 
 [node name="cutscenes" type="AnimationPlayer" parent="."]
 
+[editable path="tomo"]
+[editable path="tomo/ijo"]
 [editable path="kije"]
 [editable path="soweli"]

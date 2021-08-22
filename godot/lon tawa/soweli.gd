@@ -39,15 +39,15 @@ func get_input(delta):
 			velocity.y += jgravity
 		jumping = false
 	
-	# normal jumping
+	$Label.text = str(velocity.y)
 	if Input.is_action_pressed("jump") && !floating:
 		if onfloor:
 			jumping = true
 		
 		#jumping
 		if jumping:
-			velocity.y = velocity.y - curforce
-			#velocity.y = clamp(velocity.y - curforce, -800, 10000000)
+			#velocity.y = velocity.y - curforce
+			velocity.y = clamp(velocity.y - curforce, -600, 10000000)
 			curforce = curforce * jumpinc
 
 	
@@ -113,7 +113,9 @@ func get_input(delta):
 func _physics_process(delta):
 	if focused:
 		get_input(delta)
-	velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
+	if !floating:
+		velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
+		
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	

@@ -16,12 +16,12 @@ export (float, 0, 1.0) var jgravity = 350
 
 export (float, 0, 1.0) var climbspeed = 300
 export (int, 0, 200) var inertia = 100
-
+export var floating = true
 
 #setting up ground variables
 var velocity = Vector2.ZERO
 var curforce = jumpheight
-var floating = false
+
 
 var jumping = false
 var climbing = false
