@@ -21,6 +21,8 @@ export (int, 0, 200) var inertia = 100
 #setting up ground variables
 var velocity = Vector2.ZERO
 var curforce = jumpheight
+var floating = false
+
 var jumping = false
 var climbing = false
 var wall = false

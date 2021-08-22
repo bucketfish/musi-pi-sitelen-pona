@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://tomo/template.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tomo/tomo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ijo lon ma/leko.tscn" type="PackedScene" id=2]
+[ext_resource path="res://ijo/ijo.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2260.19, 10 )
@@ -36,3 +37,7 @@ tile_data = PoolIntArray( 327706, 0, 0, 327707, 0, 1, 327708, 0, 1, 327709, 0, 1
 
 [node name="leko" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( -177.568, 352.366 )
+
+[node name="ijo" parent="." index="6" instance=ExtResource( 3 )]
+position = Vector2( 245.856, 176.443 )
+ijo_id = "soweli"

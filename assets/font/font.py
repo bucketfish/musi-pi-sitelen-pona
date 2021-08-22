@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from PIL import Image, ImageDraw, ImageFont
-
+import sys
 
 # Settings
 W, H = (256, 256)
-thing = "\uE692"
+
+thing = bytes(sys.argv[1], 'ascii').decode("unicode-escape")
+print(thing)
 # Font
 font = ImageFont.truetype("linja-sike.otf", 256, encoding='utf-8', layout_engine=ImageFont.LAYOUT_RAQM)
 

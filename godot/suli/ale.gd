@@ -35,7 +35,6 @@ func change_focus(thing=""):
 		if !kije_climbing:
 			$kije.focus(false)
 
-	
 		
 func _input(event):
 	if event.is_action_pressed("change_focus"):

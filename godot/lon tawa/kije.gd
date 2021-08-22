@@ -5,7 +5,7 @@ extends "res://lon tawa/tawa.gd"
 export var scene_id = "kije"
 signal climb
 
-#physics modes with numbers
+
 func _ready():
 	raycasts = {
 		"floor": [$floor1, $floor2, $floor3],
@@ -16,7 +16,6 @@ func _ready():
 	inertia = 10
 
 func get_input(delta):
-		
 	#settle these variables first
 	var onfloor = raycast("floor")
 	var wall_l = raycast("left") && Input.is_action_pressed("left")

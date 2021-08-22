@@ -34,13 +34,13 @@ func get_input(delta):
 		velocity.x = lerp(velocity.x, 0, friction * delta * 70)
 
 	#apply gravity when finished jumping
-	if Input.is_action_just_released("jump"):	
+	if Input.is_action_just_released("jump") && !floating:	
 		if velocity.y < 0:
 			velocity.y += jgravity
 		jumping = false
 	
 	# normal jumping
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_pressed("jump") && !floating:
 		if onfloor:
 			jumping = true
 		
@@ -102,7 +102,7 @@ func get_input(delta):
 
 	
 	#animation
-	if jumping:
+	if jumping || floating:
 		anim.travel("idle")
 	elif Input.is_action_pressed("right") || Input.is_action_pressed("left"):
 		anim.travel("walk")
