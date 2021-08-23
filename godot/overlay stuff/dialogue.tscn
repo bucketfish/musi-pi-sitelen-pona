@@ -1,0 +1,177 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://overlay stuff/nimi.png" type="Texture" id=1]
+[ext_resource path="res://overlay stuff/nimifill.png" type="Texture" id=2]
+[ext_resource path="res://overlay stuff/dialogue.gd" type="Script" id=3]
+[ext_resource path="res://linja-sike.otf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 4 )
+
+[node name="dialogue" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lukin" type="Node2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="back" type="NinePatchRect" parent="lukin" groups=[
+"color-inv",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 750.0
+margin_right = 1848.0
+margin_bottom = 1100.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="border" type="NinePatchRect" parent="lukin" groups=[
+"color",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 750.0
+margin_right = 1848.0
+margin_bottom = 1100.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ijo toki" type="Node2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="back" type="NinePatchRect" parent="ijo toki" groups=[
+"color-inv",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 250.0
+margin_top = 630.0
+margin_right = 500.0
+margin_bottom = 850.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="border" type="NinePatchRect" parent="ijo toki" groups=[
+"color",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 250.0
+margin_top = 630.0
+margin_right = 500.0
+margin_bottom = 850.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="toki" type="Sprite" parent="ijo toki" groups=[
+"color",
+]]
+position = Vector2( 375, 735 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="ijo toki2" type="Node2D" parent="."]
+position = Vector2( 1024, 0 )
+scale = Vector2( -0.5, 0.5 )
+
+[node name="back" type="NinePatchRect" parent="ijo toki2" groups=[
+"color-inv",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 250.0
+margin_top = 630.0
+margin_right = 500.0
+margin_bottom = 850.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="border" type="NinePatchRect" parent="ijo toki2" groups=[
+"color",
+]]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 250.0
+margin_top = 630.0
+margin_right = 500.0
+margin_bottom = 850.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 31.5592, 59.4288, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="toki" type="Sprite" parent="ijo toki2" groups=[
+"color",
+]]
+position = Vector2( 375, 735 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="text" type="RichTextLabel" parent="." groups=[
+"color",
+]]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 170.0
+margin_top = 450.0
+margin_right = 854.0
+margin_bottom = 530.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "toki a"
+text = "toki a"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -8,9 +8,10 @@ onready var collisions = [$sike, $sike2, $sike3, $sike4, $leko, $leko2, $leko3, 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	check()
 	
-func check():
+	init_jo()
+	
+func init_jo():
 	if "leko" in persistent.sona["jo"]:
 		visible = true
 		for i in collisions:
@@ -21,7 +22,13 @@ func check():
 		for i in collisions:
 			i.set_deferred("disabled", true)
 
-
+	
+func check(thing):
+	if "leko" == thing:
+		visible = true
+		for i in collisions:
+			i.disabled = false
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

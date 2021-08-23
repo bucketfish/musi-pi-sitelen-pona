@@ -15,6 +15,20 @@ func _ready():
 	connect("climb", get_parent().get_parent(), "kije_climb")
 	inertia = 10
 	persistent.set_color(self)
+	init_jo()
+	
+func init_jo():
+	if !(scene_id in persistent.sona["jo"]):
+		visible = false
+		$"collision box".disabled = true
+	else:
+		pass
+		
+func check(thing):
+	if scene_id == thing:
+		emit_signal("climb")
+		queue_free()
+
 
 func get_input(delta):
 	#settle these variables first

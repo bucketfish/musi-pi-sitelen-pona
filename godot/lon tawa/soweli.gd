@@ -112,11 +112,18 @@ func get_input(delta):
 
 	
 func _physics_process(delta):
-	if focused:
+	if !(base.state in ["game", "dialogue"]):
+		return
+	if focused && base.state == "game":
 		get_input(delta)
+	else:
+		velocity.x = lerp(velocity.x, 0, friction * delta * 70)
+		jumping = false
+	
 	if !floating:
 		velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
 		
+	
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	

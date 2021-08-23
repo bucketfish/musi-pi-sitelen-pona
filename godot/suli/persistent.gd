@@ -1,7 +1,7 @@
 extends Node
 
 var sona = {
-	"jo": ["nena"],
+	"jo": [],
 	"supa": "",
 }
 
@@ -59,7 +59,11 @@ func _load():
 func _start():
 	pass
 
+
+func init_jo():
+	get_node("/root/ale").propagate_call("init_jo")
+	
 func add_jo(thing):
 	sona["jo"].append(thing)
-	get_node("/root/ale").propagate_call("check")
-		
+	get_node("/root/ale").propagate_call("check", [thing])
+	

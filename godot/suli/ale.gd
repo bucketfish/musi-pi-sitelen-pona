@@ -1,10 +1,7 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var state = "game"
 var focus = "soweli"
 var kije_climbing = false
 var kije = preload("res://lon tawa/kije.tscn")
@@ -12,7 +9,8 @@ var kije = preload("res://lon tawa/kije.tscn")
 func _ready():
 	change_focus("soweli")
 	persistent.set_color(self)
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.5
+	), "timeout")
 	$cutscenes.play("fadein")
 
 func change_focus(thing=""):
@@ -37,7 +35,6 @@ func change_focus(thing=""):
 		if !kije_climbing:
 			$tawa/kije.focus(false)
 
-		
 func _input(event):
 	if event.is_action_pressed("change_focus"):
 		change_focus()

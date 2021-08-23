@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://toki pi musi pi sitelen pona - translations.en_CA.translation", "res://toki pi musi pi sitelen pona - translations.en_US.translation" ]
+
+source_file="res://toki pi musi pi sitelen pona - translations.csv"
+dest_files=[ "res://toki pi musi pi sitelen pona - translations.en_CA.translation", "res://toki pi musi pi sitelen pona - translations.en_US.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

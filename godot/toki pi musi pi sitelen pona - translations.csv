@@ -1,0 +1,30 @@
+keys,en_CA,en_US
+,this lane is called 'en_CA' but it's actually sitelen lasina,"this lane is called 'en_US' but it's unicode characters for sitelen pona characters with a custom function, 'sp()'"
+,,
+,netadata,
+LANGUAGE_NAME,toki pona,
+MENU_PLAY,o musi,
+MENU_OPTIONS,o ante e ijo,
+MENU_QUIT,o pini,
+MENU_VERSION,nanpa musi,
+MENU_PAUSED,pake,
+MENU_CONTINUE,o awen musi,
+MENU_SAVENQUIT,o pini musi,
+,,
+,name of npcs,
+NIMI_SOWELI,soweli,
+NIMI_KIJE,kijetesantakalu,
+NIMI_WASO,waso,
+NIMI_AKESI,akesi,
+NIMI_KALA,kala,
+NIMI_PIPI,pipi,
+,,
+,dialogues,
+KIJE_OPEN1K,mu,
+KIJE_OPEN2S,mu,
+KIJE_OPEN3K,sina tawa seme,
+KIJE_OPEN4S,mi sona ala,
+KIJE_OPEN5S,sina wile ala wile tawa lon poka,
+KIJE_OPEN6K,wile,
+KIJE_OPEN7S,mu,
+KIJE_OPEN8K,mu,

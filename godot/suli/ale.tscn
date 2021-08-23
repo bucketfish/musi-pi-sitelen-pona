@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tomo/1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://lon tawa/soweli.tscn" type="PackedScene" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://lon tawa/kije.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ijo/appear.gd" type="Script" id=6]
 [ext_resource path="res://suli/kule.gd" type="Script" id=7]
+[ext_resource path="res://overlay stuff/dialogue.tscn" type="PackedScene" id=8]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "fadein"
 length = 0.2
 tracks/0/type = "value"
@@ -24,9 +25,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
-
 [sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
 
 [node name="ale" type="Node2D" groups=[
 "color",
@@ -49,6 +50,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 37.8281, 511.836 )
 offset = Vector2( 0, -100 )
 current = true
+zoom = Vector2( 1.5, 1.5 )
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 10.0
@@ -71,7 +73,7 @@ script = ExtResource( 6 )
 id = "suno"
 
 [node name="cutscenes" type="AnimationPlayer" parent="."]
-anims/fadein = SubResource( 3 )
+anims/fadein = SubResource( 1 )
 
 [node name="tawa" type="CanvasLayer" parent="."]
 layer = 2
@@ -85,7 +87,7 @@ position = Vector2( -893.302, 445.98 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="AnimationTree" parent="tawa/kije" index="14"]
-parameters/playback = SubResource( 1 )
+parameters/playback = SubResource( 2 )
 
 [node name="soweli" parent="tawa" instance=ExtResource( 2 )]
 modulate = Color( 0, 0, 0, 1 )
@@ -95,7 +97,7 @@ position = Vector2( 238.44, 299.146 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="AnimationTree" parent="tawa/soweli" index="10"]
-parameters/playback = SubResource( 2 )
+parameters/playback = SubResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 50
@@ -103,6 +105,7 @@ layer = 50
 [node name="kule" type="ColorRect" parent="CanvasLayer" groups=[
 "color-inv",
 ]]
+visible = false
 modulate = Color( 1, 1, 1, 0.995488 )
 self_modulate = Color( 1, 1, 1, 0.995488 )
 anchor_right = 1.0
@@ -112,9 +115,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="toki" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="dialogue" parent="toki" instance=ExtResource( 8 )]
+visible = false
+
 [editable path="tomo"]
 [editable path="tomo/kasi"]
-[editable path="tomo/ijo"]
-[editable path="tomo/ijo2"]
+[editable path="tomo/ijo-lon"]
+[editable path="tomo/ijo-kasi"]
+[editable path="tomo/ijo-nena"]
+[editable path="tomo/ijo-kije"]
 [editable path="tawa/kije"]
 [editable path="tawa/soweli"]
