@@ -7,8 +7,8 @@ var sona = {
 
 var nasin = {
 	"kule":{
-		"linja": "#add8ff",
-		"monsi": "#454545"
+		"linja": "#000000",
+		"monsi": "#ffffff"
 	}
 }
 
