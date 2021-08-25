@@ -38,6 +38,15 @@ var showing = false
 var current = ""
 
 func _ready():
+	redo_color()
+	
+	visible = false
+	showing = false
+	ijo1.visible = false
+	ijo2.visible = false
+	#show_dialogue("kije_open")
+	
+func redo_color():
 	persistent.set_color(border)
 	persistent.set_color(back)
 	persistent.set_color(border_toki1)
@@ -47,12 +56,6 @@ func _ready():
 	persistent.set_color(toki1)
 	persistent.set_color(toki2)
 	persistent.set_color(text)
-	
-	visible = false
-	showing = false
-	ijo1.visible = false
-	ijo2.visible = false
-	#show_dialogue("kije_open")
 	
 func show_dialogue(cur):
 	base.state = "dialogue"

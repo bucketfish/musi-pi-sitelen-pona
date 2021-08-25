@@ -11,9 +11,7 @@ func _ready():
 		"floor": [$floor1, $floor2, $floor3],
 	}
 	kije_climb(false)
-	persistent.set_color(self)
 	
-
 
 func get_input(delta):
 		

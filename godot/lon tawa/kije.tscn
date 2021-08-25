@@ -62,6 +62,7 @@ start_node = "idle"
 "color",
 "kije",
 "lon tawa",
+"set-color",
 ]]
 z_index = 10
 collision_layer = 3

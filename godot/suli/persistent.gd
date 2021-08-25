@@ -33,6 +33,12 @@ func set_color(node):
 	elif node.is_in_group("color-inv"):
 		node.modulate = nasin["kule"]["monsi"]
 
+func reset_color():
+	print(nasin)
+	for i in get_tree().get_nodes_in_group("set-color"):
+		get_node("/root").propagate_call("redo_color")
+	VisualServer.set_default_clear_color(nasin["kule"]["monsi"])
+		
 
 func _save():
 	var saves = File.new()

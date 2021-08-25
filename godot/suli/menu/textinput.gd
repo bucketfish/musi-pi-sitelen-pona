@@ -18,6 +18,9 @@ func _ready():
 	visible = false
 	back.visible = false
 	line.editable = false
+	redo_color()
+	
+func redo_color():
 	persistent.set_color(self)
 	
 func _show(thing):
@@ -33,7 +36,11 @@ func _show(thing):
 		yield(self, "enter")
 		
 		if true:
+			persistent.nasin["kule"][thing] = line.text
+			persistent.reset_color()
 			pona = true
+		else:
+			pass
 	
 	visible = false
 	back.visible = false

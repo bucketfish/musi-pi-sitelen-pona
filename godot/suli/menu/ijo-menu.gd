@@ -24,13 +24,11 @@ func _on_body_entered(body):
 		$RichTextLabel.text = str(selected)
 		
 		#queue_free()
-func select(thing, group, val):
-	print(thing + " " + group + " ;" + ijo_id + " " + ijo_group)
-	
+func ijo_select(thing, group, val):
+
+
 	if group == ijo_group:
 		if thing == ijo_id && val:
-			print(ijo_id + " CHOSEN")
 			$show.play("kalama")
 		else:
-			print(ijo_id + " not")
 			$show.play("none")

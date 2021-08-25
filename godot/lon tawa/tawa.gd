@@ -43,6 +43,10 @@ func _ready():
 	$"collision box".disabled = false
 	$AnimationTree.active = true
 	anim.travel("idle")
+	redo_color()
+	
+func redo_color():
+	persistent.set_color(self)
 	#base.connect("finish_load", self, "on_load")
 	
 func on_load():

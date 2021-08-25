@@ -31,6 +31,7 @@ tracks/0/keys = {
 
 [node name="ale" type="Node2D" groups=[
 "color",
+"set-color",
 ]]
 modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 4 )

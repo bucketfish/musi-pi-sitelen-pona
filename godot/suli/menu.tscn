@@ -848,6 +848,7 @@ tracks/5/keys = {
 
 [node name="menu" groups=[
 "color",
+"set-color",
 ] instance=ExtResource( 1 )]
 
 [node name="lon" parent="." index="3"]
@@ -995,6 +996,7 @@ __meta__ = {
 
 [node name="input" type="Node2D" parent="CanvasLayer2" index="0" groups=[
 "color",
+"set-color",
 ]]
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 15 )

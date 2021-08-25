@@ -14,7 +14,6 @@ func _ready():
 	}
 	connect("climb", get_parent().get_parent(), "kije_climb")
 	inertia = 10
-	persistent.set_color(self)
 	init_jo()
 	
 func init_jo():

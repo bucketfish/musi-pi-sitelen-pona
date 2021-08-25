@@ -63,6 +63,7 @@ start_node = "idle"
 [node name="soweli" type="KinematicBody2D" groups=[
 "color",
 "lon tawa",
+"set-color",
 "soweli",
 ]]
 z_index = 10

@@ -9,7 +9,9 @@
 size = 64
 font_data = ExtResource( 4 )
 
-[node name="dialogue" type="Control"]
+[node name="dialogue" type="Control" groups=[
+"set-color",
+]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )

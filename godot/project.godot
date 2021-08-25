@@ -68,6 +68,7 @@ ability={
 [locale]
 
 test="en_US"
+fallback="en_US"
 translations=PoolStringArray( "res://toki pi musi pi sitelen pona - translations.en_CA.translation", "res://toki pi musi pi sitelen pona - translations.en_US.translation" )
 
 [physics]
