@@ -119,7 +119,6 @@ __meta__ = {
 layer = 20
 
 [node name="dialogue" parent="toki" instance=ExtResource( 8 )]
-visible = false
 
 [editable path="tomo"]
 [editable path="tomo/kasi"]

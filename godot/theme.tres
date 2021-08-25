@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://linja-sike-lasina.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+[resource]
+LineEdit/colors/clear_button_color = Color( 1, 1, 1, 1 )
+LineEdit/colors/clear_button_color_pressed = Color( 1, 1, 1, 1 )
+LineEdit/colors/cursor_color = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color_selected = Color( 1, 1, 1, 1 )
+LineEdit/colors/font_color_uneditable = Color( 1, 1, 1, 0.501961 )
+LineEdit/colors/selection_color = Color( 1, 1, 1, 0.392157 )
+LineEdit/constants/minimum_spaces = 12
+LineEdit/fonts/font = SubResource( 1 )
+LineEdit/icons/clear = null
+LineEdit/styles/focus = SubResource( 3 )
+LineEdit/styles/normal = SubResource( 2 )
+LineEdit/styles/read_only = null

@@ -37,14 +37,12 @@ var focused = false
 onready var raycasts = {}
 
 onready var anim = $AnimationTree.get("parameters/playback")
-onready var base = get_node("/root/ale")
 
 func _ready():
 	#turn on things, set the base
 	$"collision box".disabled = false
 	$AnimationTree.active = true
 	anim.travel("idle")
-	$RemoteTransform2D.remote_path = "/root/ale/Camera2D"
 	#base.connect("finish_load", self, "on_load")
 	
 func on_load():

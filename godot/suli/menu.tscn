@@ -1,0 +1,1072 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://tomo/tomo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://suli/menu/menu-soweli.tscn" type="PackedScene" id=2]
+[ext_resource path="res://suli/menu/ijo-menu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://suli/menu/musi.png" type="Texture" id=4]
+[ext_resource path="res://suli/menu/sona.png" type="Texture" id=5]
+[ext_resource path="res://suli/menu/nasin.png" type="Texture" id=6]
+[ext_resource path="res://suli/menu/weka.png" type="Texture" id=7]
+[ext_resource path="res://suli/menu/kule.png" type="Texture" id=8]
+[ext_resource path="res://ma/nena.png" type="Texture" id=9]
+[ext_resource path="res://suli/menu/kalama.png" type="Texture" id=10]
+[ext_resource path="res://suli/menu/linja.png" type="Texture" id=11]
+[ext_resource path="res://suli/menu/monsi.png" type="Texture" id=12]
+[ext_resource path="res://nimi.tres" type="Texture" id=13]
+[ext_resource path="res://overlay stuff/nimifill.png" type="Texture" id=14]
+[ext_resource path="res://suli/menu/textinput.gd" type="Script" id=15]
+[ext_resource path="res://theme.tres" type="Theme" id=16]
+
+[sub_resource type="Animation" id=1]
+resource_name = "kalama"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("kalama2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("kalama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:selected")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "none"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:selected")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2.5 ), Vector2( 0, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "kalama"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("kalama2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("kalama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:selected")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "none"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:selected")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2.5 ), Vector2( 0, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "kalama"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("kalama2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("kalama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:selected")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "none"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:selected")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2.5 ), Vector2( 0, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "kalama"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("kalama2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("kalama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:selected")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "none"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:selected")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2.5 ), Vector2( 0, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "kalama"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("kalama2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("kalama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:selected")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "none"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("kalama2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("kalama:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:selected")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "a"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -2.5 ), Vector2( 0, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("ijo-musi:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 242, -160 ), Vector2( 242, 340 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ijo-nasin:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 422, -160 ), Vector2( 422, 340 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ijo-sona:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 602, -160 ), Vector2( 602, 340 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ijo-weka:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 782, -160 ), Vector2( 782, 340 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("ijo-nasin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 422, 340 ), Vector2( 242, 340 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("nasin-nena:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 422, -160 ), Vector2( 422, 340 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("nasin-kule:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 602, -160 ), Vector2( 602, 340 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("nasin-kalama:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 0.5 ),
+"update": 0,
+"values": [ Vector2( 782, -160 ), Vector2( 782, 340 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ijo-musi:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 242, 340 ), Vector2( 242, -160 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ijo-sona:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 602, 340 ), Vector2( 602, -160 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ijo-weka:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 782, 340 ), Vector2( 782, -160 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "nasinkule"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("nasin-nena:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 422, 340 ), Vector2( 422, -160 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("nasin-kule:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 602, 340 ), Vector2( 262, 340 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("nasin-kalama:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 782, 340 ), Vector2( 782, -160 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ijo-nasin:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 242, 340 ), Vector2( 242, -160 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("nasinkule-linja:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 512, -160 ), Vector2( 512, 340 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("nasinkule-monsi:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 762, -160 ), Vector2( 762, 340 ) ]
+}
+
+[node name="menu" groups=[
+"color",
+] instance=ExtResource( 1 )]
+
+[node name="lon" parent="." index="3"]
+position = Vector2( -10, -30 )
+tile_data = PoolIntArray( -65539, 0, 0, -65538, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 2, -3, 0, 65536, -2, 0, 65537, -1, 0, 65537, -65536, 0, 65537, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 65537, -65531, 0, 65537, -65530, 0, 65537, -65529, 0, 65537, -65528, 0, 65537, -65527, 0, 65537, -65526, 0, 65537, -65525, 0, 65537, -65524, 0, 65537, -65523, 0, 65537, -65522, 0, 65538, 65533, 0, 65536, 65534, 0, 65537, 65535, 0, 65537, 0, 0, 196608, 1, 0, 131073, 2, 0, 131073, 3, 0, 131073, 4, 0, 131073, 5, 0, 131073, 6, 0, 131073, 7, 0, 131073, 8, 0, 131073, 9, 0, 131073, 10, 0, 196610, 11, 0, 65537, 12, 0, 65537, 13, 0, 65537, 14, 0, 65538, 131069, 0, 65536, 131070, 0, 65537, 131071, 0, 65537, 65536, 0, 65538, 65546, 0, 65536, 65547, 0, 65537, 65548, 0, 65537, 65549, 0, 65537, 65550, 0, 65538, 196605, 0, 65536, 196606, 0, 65537, 196607, 0, 65537, 131072, 0, 65538, 131082, 0, 65536, 131083, 0, 65537, 131084, 0, 65537, 131085, 0, 65537, 131086, 0, 65538, 262141, 0, 65536, 262142, 0, 65537, 262143, 0, 65537, 196608, 0, 65538, 196618, 0, 65536, 196619, 0, 65537, 196620, 0, 65537, 196621, 0, 65537, 196622, 0, 65538, 327677, 0, 65536, 327678, 0, 65537, 327679, 0, 65537, 262144, 0, 65538, 262154, 0, 65536, 262155, 0, 65537, 262156, 0, 65537, 262157, 0, 65537, 262158, 0, 65538, 393213, 0, 65536, 393214, 0, 65537, 393215, 0, 65537, 327680, 0, 65538, 327690, 0, 65536, 327691, 0, 65537, 327692, 0, 65537, 327693, 0, 65537, 327694, 0, 65538, 458749, 0, 65536, 458750, 0, 65537, 458751, 0, 65537, 393216, 0, 327680, 393217, 0, 1, 393218, 0, 1, 393219, 0, 1, 393220, 0, 1, 393221, 0, 1, 393222, 0, 1, 393223, 0, 1, 393224, 0, 1, 393225, 0, 1, 393226, 0, 327682, 393227, 0, 65537, 393228, 0, 65537, 393229, 0, 65537, 393230, 0, 65538, 524285, 0, 65536, 524286, 0, 65537, 524287, 0, 65537, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65537, 458756, 0, 65537, 458757, 0, 65537, 458758, 0, 65537, 458759, 0, 65537, 458760, 0, 65537, 458761, 0, 65537, 458762, 0, 65537, 458763, 0, 65537, 458764, 0, 65537, 458765, 0, 65537, 458766, 0, 65538, 589821, 0, 65536, 589822, 0, 65537, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65538, 655357, 0, 65536, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65538, 720893, 0, 131072, 720894, 0, 131073, 720895, 0, 131073, 655360, 0, 131073, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 131073, 655365, 0, 131073, 655366, 0, 131073, 655367, 0, 131073, 655368, 0, 131073, 655369, 0, 131073, 655370, 0, 131073, 655371, 0, 131073, 655372, 0, 131073, 655373, 0, 131073, 655374, 0, 131074 )
+
+[node name="menu-soweli" parent="." index="4" instance=ExtResource( 2 )]
+position = Vector2( 150.085, 483.565 )
+
+[node name="ijo-musi" parent="." index="5" instance=ExtResource( 3 )]
+position = Vector2( 242, 340 )
+ijo_id = "musi"
+ijo_group = "main"
+
+[node name="Sprite" parent="ijo-musi" index="0"]
+texture = ExtResource( 4 )
+
+[node name="ijo-nasin" parent="." index="6" instance=ExtResource( 3 )]
+position = Vector2( 422, 340 )
+ijo_id = "nasin"
+ijo_group = "main"
+
+[node name="Sprite" parent="ijo-nasin" index="0"]
+texture = ExtResource( 6 )
+
+[node name="ijo-sona" parent="." index="7" instance=ExtResource( 3 )]
+position = Vector2( 602, 340 )
+ijo_id = "sona"
+ijo_group = "main"
+
+[node name="Sprite" parent="ijo-sona" index="0"]
+texture = ExtResource( 5 )
+
+[node name="ijo-weka" parent="." index="8" instance=ExtResource( 3 )]
+position = Vector2( 782, 340 )
+ijo_id = "weka"
+ijo_group = "main"
+
+[node name="Sprite" parent="ijo-weka" index="0"]
+texture = ExtResource( 7 )
+
+[node name="nasin-nena" parent="." index="9" instance=ExtResource( 3 )]
+position = Vector2( 422, -160 )
+ijo_id = "nasinnena"
+ijo_group = "nasin"
+
+[node name="Sprite" parent="nasin-nena" index="0"]
+texture = ExtResource( 9 )
+
+[node name="show" parent="nasin-nena" index="2"]
+anims/kalama = SubResource( 1 )
+anims/none = SubResource( 2 )
+
+[node name="anim" parent="nasin-nena" index="3"]
+anims/a = SubResource( 3 )
+
+[node name="nasin-kule" parent="." index="10" instance=ExtResource( 3 )]
+position = Vector2( 602, -160 )
+ijo_id = "nasinkule"
+ijo_group = "nasin"
+
+[node name="Sprite" parent="nasin-kule" index="0"]
+texture = ExtResource( 8 )
+
+[node name="show" parent="nasin-kule" index="2"]
+anims/kalama = SubResource( 4 )
+anims/none = SubResource( 5 )
+
+[node name="anim" parent="nasin-kule" index="3"]
+anims/a = SubResource( 6 )
+
+[node name="nasin-kalama" parent="." index="11" instance=ExtResource( 3 )]
+position = Vector2( 782, -160 )
+ijo_id = "nasinkalama"
+ijo_group = "nasin"
+
+[node name="Sprite" parent="nasin-kalama" index="0"]
+texture = ExtResource( 10 )
+
+[node name="show" parent="nasin-kalama" index="2"]
+anims/kalama = SubResource( 7 )
+anims/none = SubResource( 8 )
+
+[node name="anim" parent="nasin-kalama" index="3"]
+anims/a = SubResource( 9 )
+
+[node name="nasinkule-linja" parent="." index="12" instance=ExtResource( 3 )]
+position = Vector2( 512, -160 )
+ijo_id = "linja"
+ijo_group = "nasinkule"
+
+[node name="Sprite" parent="nasinkule-linja" index="0"]
+texture = ExtResource( 11 )
+
+[node name="show" parent="nasinkule-linja" index="2"]
+anims/kalama = SubResource( 10 )
+anims/none = SubResource( 11 )
+
+[node name="anim" parent="nasinkule-linja" index="3"]
+anims/a = SubResource( 12 )
+
+[node name="nasinkule-monsi" parent="." index="13" instance=ExtResource( 3 )]
+position = Vector2( 762, -160 )
+ijo_id = "monsi"
+ijo_group = "nasinkule"
+
+[node name="Sprite" parent="nasinkule-monsi" index="0"]
+texture = ExtResource( 12 )
+
+[node name="show" parent="nasinkule-monsi" index="2"]
+anims/kalama = SubResource( 13 )
+anims/none = SubResource( 14 )
+
+[node name="anim" parent="nasinkule-monsi" index="3"]
+anims/a = SubResource( 15 )
+
+[node name="anim" type="AnimationPlayer" parent="." index="14"]
+anims/main = SubResource( 16 )
+anims/nasin = SubResource( 17 )
+anims/nasinkule = SubResource( 18 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="15"]
+scale = Vector2( 0.5, 0.5 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+
+[node name="back" type="NinePatchRect" parent="CanvasLayer" index="0" groups=[
+"color-inv",
+]]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 512.0
+margin_top = 400.0
+margin_right = 1536.0
+margin_bottom = 800.0
+texture = ExtResource( 14 )
+region_rect = Rect2( 31.559, 59.429, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." index="16"]
+
+[node name="input" type="Node2D" parent="CanvasLayer2" index="0" groups=[
+"color",
+]]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="line" type="NinePatchRect" parent="CanvasLayer2/input" index="0"]
+margin_left = 512.0
+margin_top = 400.0
+margin_right = 1536.0
+margin_bottom = 800.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 31.559, 59.429, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line2" type="NinePatchRect" parent="CanvasLayer2/input" index="1"]
+margin_left = 700.0
+margin_top = 600.0
+margin_right = 1348.0
+margin_bottom = 350.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 31.559, 59.429, 192.985, 112.967 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer2/input" index="2"]
+position = Vector2( 960, 500 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer2/input" index="3"]
+position = Vector2( 1088, 508 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Control" type="Node2D" parent="CanvasLayer2/input" index="4"]
+scale = Vector2( 2, 2 )
+
+[node name="Control" type="Control" parent="CanvasLayer2/input/Control" index="0"]
+margin_right = 40.0
+margin_bottom = 40.0
+theme = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer2/input/Control/Control" index="0"]
+margin_left = 355.0
+margin_top = 300.0
+margin_right = 669.0
+margin_bottom = 350.0
+align = 1
+placeholder_text = "kule"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="ijo-musi"]
+[editable path="ijo-nasin"]
+[editable path="ijo-sona"]
+[editable path="ijo-weka"]
+[editable path="nasin-nena"]
+[editable path="nasin-kule"]
+[editable path="nasin-kalama"]
+[editable path="nasinkule-linja"]
+[editable path="nasinkule-monsi"]
