@@ -3,11 +3,11 @@ extends "res://lon tawa/tawa.gd"
 
 #establish scene name for saving
 export var scene_id = "soweli"
-onready var base = $".."
 
 #physics modes with numbers
 
 func _ready():
+	base = $".."
 	raycasts = {
 		"floor": [$floor1, $floor2, $floor3],
 	}

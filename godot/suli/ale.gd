@@ -17,6 +17,8 @@ func redo_color():
 	persistent.set_color(self)
 
 func change_focus(thing=""):
+	if state != "game" || (thing in ["", "kije"] && !("kije" in persistent.sona["jo"])):
+		return
 	if (thing == "" && focus == "soweli") || thing == "kije":
 
 		if kije_climbing:

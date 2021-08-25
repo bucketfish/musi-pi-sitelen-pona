@@ -37,6 +37,7 @@ var focused = false
 onready var raycasts = {}
 
 onready var anim = $AnimationTree.get("parameters/playback")
+onready var base = get_node("/root/ale")
 
 func _ready():
 	#turn on things, set the base

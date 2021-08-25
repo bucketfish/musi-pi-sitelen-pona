@@ -15,6 +15,7 @@ func _ready():
 	connect("climb", get_parent().get_parent(), "kije_climb")
 	inertia = 10
 	init_jo()
+	$RemoteTransform2D.remote_path = "/root/ale/Camera2D"
 	
 func init_jo():
 	if !(scene_id in persistent.sona["jo"]):
@@ -85,12 +86,21 @@ func get_input(delta):
 
 	
 func _physics_process(delta):
-	if focused:
+	
+	if !(base.state in ["game", "dialogue"]):
+		return
+	if focused && base.state == "game":
 		get_input(delta)
+	
+	else:
+		velocity.x = lerp(velocity.x, 0, friction * delta * 70)
+		
 	if wall:
 		velocity.y = clamp(velocity.y + wgravity * delta, -1500, 200)
-	else:
+
+	if !floating:
 		velocity.y = clamp(velocity.y + gravity * delta, -1500, 1500)
+		
 	var snap = Vector2.DOWN if !jumping else Vector2.ZERO
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	
