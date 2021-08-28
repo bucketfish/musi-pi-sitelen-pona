@@ -87,7 +87,8 @@ func get_input(delta):
 	
 func _physics_process(delta):
 	
-	if !(base.state in ["game", "dialogue"]):
+	if base.pause == true:
+		anim.travel("idle")
 		return
 	if focused && base.state == "game":
 		get_input(delta)

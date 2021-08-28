@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tomo/1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://lon tawa/soweli.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ijo/appear.gd" type="Script" id=6]
 [ext_resource path="res://suli/kule.gd" type="Script" id=7]
 [ext_resource path="res://overlay stuff/dialogue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://suli/menu.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadein"
@@ -120,6 +121,11 @@ __meta__ = {
 layer = 20
 
 [node name="dialogue" parent="toki" instance=ExtResource( 8 )]
+
+[node name="menu" type="CanvasLayer" parent="."]
+layer = 50
+
+[node name="menu" parent="menu" instance=ExtResource( 9 )]
 
 [editable path="tomo"]
 [editable path="tomo/kasi"]

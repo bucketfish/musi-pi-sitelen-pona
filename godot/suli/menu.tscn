@@ -853,14 +853,40 @@ tracks/5/keys = {
 ] instance=ExtResource( 1 )]
 script = ExtResource( 17 )
 
-[node name="lon" parent="." index="3"]
+[node name="CanvasLayer3" type="CanvasLayer" parent="." index="0"]
+layer = 49
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3" index="0" groups=[
+"color-inv",
+]]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="kasi" parent="." index="1"]
+visible = false
+
+[node name="nena" parent="." index="2"]
+visible = false
+
+[node name="ma" parent="." index="3"]
+visible = false
+
+[node name="lon" parent="." index="4"]
 position = Vector2( -10, -30 )
+collision_layer = 8
+collision_mask = 8
 tile_data = PoolIntArray( -65539, 0, 0, -65538, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 1, -131070, 0, 1, -131069, 0, 1, -131068, 0, 1, -131067, 0, 1, -131066, 0, 1, -131065, 0, 1, -131064, 0, 1, -131063, 0, 1, -131062, 0, 1, -131061, 0, 1, -131060, 0, 1, -131059, 0, 1, -131058, 0, 2, -3, 0, 65536, -2, 0, 65537, -1, 0, 65537, -65536, 0, 65537, -65535, 0, 65537, -65534, 0, 65537, -65533, 0, 65537, -65532, 0, 65537, -65531, 0, 65537, -65530, 0, 65537, -65529, 0, 65537, -65528, 0, 65537, -65527, 0, 65537, -65526, 0, 65537, -65525, 0, 65537, -65524, 0, 65537, -65523, 0, 65537, -65522, 0, 65538, 65533, 0, 65536, 65534, 0, 65537, 65535, 0, 65537, 0, 0, 196608, 1, 0, 131073, 2, 0, 131073, 3, 0, 131073, 4, 0, 131073, 5, 0, 131073, 6, 0, 131073, 7, 0, 131073, 8, 0, 131073, 9, 0, 131073, 10, 0, 196610, 11, 0, 65537, 12, 0, 65537, 13, 0, 65537, 14, 0, 65538, 131069, 0, 65536, 131070, 0, 65537, 131071, 0, 65537, 65536, 0, 65538, 65546, 0, 65536, 65547, 0, 65537, 65548, 0, 65537, 65549, 0, 65537, 65550, 0, 65538, 196605, 0, 65536, 196606, 0, 65537, 196607, 0, 65537, 131072, 0, 65538, 131082, 0, 65536, 131083, 0, 65537, 131084, 0, 65537, 131085, 0, 65537, 131086, 0, 65538, 262141, 0, 65536, 262142, 0, 65537, 262143, 0, 65537, 196608, 0, 65538, 196618, 0, 65536, 196619, 0, 65537, 196620, 0, 65537, 196621, 0, 65537, 196622, 0, 65538, 327677, 0, 65536, 327678, 0, 65537, 327679, 0, 65537, 262144, 0, 65538, 262154, 0, 65536, 262155, 0, 65537, 262156, 0, 65537, 262157, 0, 65537, 262158, 0, 65538, 393213, 0, 65536, 393214, 0, 65537, 393215, 0, 65537, 327680, 0, 65538, 327690, 0, 65536, 327691, 0, 65537, 327692, 0, 65537, 327693, 0, 65537, 327694, 0, 65538, 458749, 0, 65536, 458750, 0, 65537, 458751, 0, 65537, 393216, 0, 327680, 393217, 0, 1, 393218, 0, 1, 393219, 0, 1, 393220, 0, 1, 393221, 0, 1, 393222, 0, 1, 393223, 0, 1, 393224, 0, 1, 393225, 0, 1, 393226, 0, 327682, 393227, 0, 65537, 393228, 0, 65537, 393229, 0, 65537, 393230, 0, 65538, 524285, 0, 65536, 524286, 0, 65537, 524287, 0, 65537, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65537, 458756, 0, 65537, 458757, 0, 65537, 458758, 0, 65537, 458759, 0, 65537, 458760, 0, 65537, 458761, 0, 65537, 458762, 0, 65537, 458763, 0, 65537, 458764, 0, 65537, 458765, 0, 65537, 458766, 0, 65538, 589821, 0, 65536, 589822, 0, 65537, 589823, 0, 65537, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 65537, 524292, 0, 65537, 524293, 0, 65537, 524294, 0, 65537, 524295, 0, 65537, 524296, 0, 65537, 524297, 0, 65537, 524298, 0, 65537, 524299, 0, 65537, 524300, 0, 65537, 524301, 0, 65537, 524302, 0, 65538, 655357, 0, 65536, 655358, 0, 65537, 655359, 0, 65537, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 65537, 589829, 0, 65537, 589830, 0, 65537, 589831, 0, 65537, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65537, 589836, 0, 65537, 589837, 0, 65537, 589838, 0, 65538, 720893, 0, 131072, 720894, 0, 131073, 720895, 0, 131073, 655360, 0, 131073, 655361, 0, 131073, 655362, 0, 131073, 655363, 0, 131073, 655364, 0, 131073, 655365, 0, 131073, 655366, 0, 131073, 655367, 0, 131073, 655368, 0, 131073, 655369, 0, 131073, 655370, 0, 131073, 655371, 0, 131073, 655372, 0, 131073, 655373, 0, 131073, 655374, 0, 131074 )
 
-[node name="menu-soweli" parent="." index="4" instance=ExtResource( 2 )]
+[node name="menu-soweli" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( 150.085, 483.565 )
+collision_layer = 8
+collision_mask = 8
 
-[node name="ijo-musi" parent="." index="5" instance=ExtResource( 3 )]
+[node name="ijo-musi" parent="." index="6" instance=ExtResource( 3 )]
 position = Vector2( 242, 340 )
 ijo_id = "musi"
 ijo_group = "main"
@@ -868,7 +894,7 @@ ijo_group = "main"
 [node name="Sprite" parent="ijo-musi" index="0"]
 texture = ExtResource( 4 )
 
-[node name="ijo-nasin" parent="." index="6" instance=ExtResource( 3 )]
+[node name="ijo-nasin" parent="." index="7" instance=ExtResource( 3 )]
 position = Vector2( 422, 340 )
 ijo_id = "nasin"
 ijo_group = "main"
@@ -876,7 +902,7 @@ ijo_group = "main"
 [node name="Sprite" parent="ijo-nasin" index="0"]
 texture = ExtResource( 6 )
 
-[node name="ijo-sona" parent="." index="7" instance=ExtResource( 3 )]
+[node name="ijo-sona" parent="." index="8" instance=ExtResource( 3 )]
 position = Vector2( 602, 340 )
 ijo_id = "sona"
 ijo_group = "main"
@@ -884,7 +910,7 @@ ijo_group = "main"
 [node name="Sprite" parent="ijo-sona" index="0"]
 texture = ExtResource( 5 )
 
-[node name="ijo-weka" parent="." index="8" instance=ExtResource( 3 )]
+[node name="ijo-weka" parent="." index="9" instance=ExtResource( 3 )]
 position = Vector2( 782, 340 )
 ijo_id = "weka"
 ijo_group = "main"
@@ -892,7 +918,7 @@ ijo_group = "main"
 [node name="Sprite" parent="ijo-weka" index="0"]
 texture = ExtResource( 7 )
 
-[node name="nasin-nena" parent="." index="9" instance=ExtResource( 3 )]
+[node name="nasin-nena" parent="." index="10" instance=ExtResource( 3 )]
 position = Vector2( 422, -160 )
 ijo_id = "nasinnena"
 ijo_group = "nasin"
@@ -907,7 +933,7 @@ anims/none = SubResource( 2 )
 [node name="anim" parent="nasin-nena" index="3"]
 anims/a = SubResource( 3 )
 
-[node name="nasin-kule" parent="." index="10" instance=ExtResource( 3 )]
+[node name="nasin-kule" parent="." index="11" instance=ExtResource( 3 )]
 position = Vector2( 602, -160 )
 ijo_id = "nasinkule"
 ijo_group = "nasin"
@@ -922,7 +948,7 @@ anims/none = SubResource( 5 )
 [node name="anim" parent="nasin-kule" index="3"]
 anims/a = SubResource( 6 )
 
-[node name="nasin-kalama" parent="." index="11" instance=ExtResource( 3 )]
+[node name="nasin-kalama" parent="." index="12" instance=ExtResource( 3 )]
 position = Vector2( 782, -160 )
 ijo_id = "nasinkalama"
 ijo_group = "nasin"
@@ -937,7 +963,7 @@ anims/none = SubResource( 8 )
 [node name="anim" parent="nasin-kalama" index="3"]
 anims/a = SubResource( 9 )
 
-[node name="nasinkule-linja" parent="." index="12" instance=ExtResource( 3 )]
+[node name="nasinkule-linja" parent="." index="13" instance=ExtResource( 3 )]
 position = Vector2( 512, -160 )
 ijo_id = "linja"
 ijo_group = "nasinkule"
@@ -952,7 +978,7 @@ anims/none = SubResource( 11 )
 [node name="anim" parent="nasinkule-linja" index="3"]
 anims/a = SubResource( 12 )
 
-[node name="nasinkule-monsi" parent="." index="13" instance=ExtResource( 3 )]
+[node name="nasinkule-monsi" parent="." index="14" instance=ExtResource( 3 )]
 position = Vector2( 762, -160 )
 ijo_id = "monsi"
 ijo_group = "nasinkule"
@@ -967,12 +993,12 @@ anims/none = SubResource( 14 )
 [node name="anim" parent="nasinkule-monsi" index="3"]
 anims/a = SubResource( 15 )
 
-[node name="anim" type="AnimationPlayer" parent="." index="14"]
+[node name="anim" type="AnimationPlayer" parent="." index="15"]
 anims/main = SubResource( 16 )
 anims/nasin = SubResource( 17 )
 anims/nasinkule = SubResource( 18 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="15"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="16"]
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
 
@@ -994,7 +1020,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." index="16"]
+[node name="CanvasLayer2" type="CanvasLayer" parent="." index="17"]
 
 [node name="input" type="Node2D" parent="CanvasLayer2" index="0" groups=[
 "color",

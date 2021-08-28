@@ -8,10 +8,15 @@ onready var line = $Control/Control/LineEdit
 
 signal color(val)
 signal enter
+signal end
 # Called when the node enters the scene tree for the first time.
 const pics = {
 	"linja": preload("res://suli/menu/linja.png"),
 	"monsi": preload("res://suli/menu/monsi.png"),
+}
+
+const colors = {
+	"laso": "#"
 }
 
 func _ready():
@@ -35,21 +40,26 @@ func _show(thing):
 	while pona == false:
 		yield(self, "enter")
 		
-		if true:
+		if line.text.is_valid_html_color():
 			persistent.nasin["kule"][thing] = line.text
 			persistent.reset_color()
 			pona = true
 		else:
 			pass
+			
+	emit_signal("color", line.text)
+	_close()
 	
+func _close():
+	emit_signal("end")
 	visible = false
 	back.visible = false
 	line.editable = false
-	emit_signal("color", line.text)
 	
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		emit_signal("enter")
+
+		
+	
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

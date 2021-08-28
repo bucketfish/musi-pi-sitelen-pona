@@ -4,10 +4,10 @@ extends "res://lon tawa/tawa.gd"
 #establish scene name for saving
 export var scene_id = "soweli"
 
-#physics modes with numbers
+var active = false
+onready var menu = $".."
 
 func _ready():
-	base = $".."
 	raycasts = {
 		"floor": [$floor1, $floor2, $floor3],
 	}
@@ -85,10 +85,10 @@ func get_input(delta):
 
 	
 func _physics_process(delta):
-	if !(base.state in ["choose", "input"]):
+	if base.pause == false:
 		return
 		
-	if base.state == "choose":
+	if menu.state == "choose":
 		get_input(delta)
 	else:
 		velocity.x = lerp(velocity.x, 0, friction * delta * 70)

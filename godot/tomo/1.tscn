@@ -232,7 +232,7 @@ texture = ExtResource( 9 )
 anims/blingbling = SubResource( 3 )
 
 [node name="ijo-kije" parent="." index="8" instance=ExtResource( 3 )]
-position = Vector2( 12.8447, -679.197 )
+position = Vector2( 40.1976, -640.122 )
 ijo_id = "kije"
 
 [node name="Sprite" parent="ijo-kije" index="0"]

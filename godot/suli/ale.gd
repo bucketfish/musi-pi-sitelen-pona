@@ -2,13 +2,20 @@ extends Node2D
 
 
 var state = "game"
+var pause = false
 var focus = "soweli"
 var kije_climbing = false
 var kije = preload("res://lon tawa/kije.tscn")
+
+onready var menu = $menu/menu
 # Called when the node enters the scene tree for the first time.
+
+signal unpause
+
 func _ready():
 	change_focus("soweli")
 	redo_color()
+	menu._pause()
 	yield(get_tree().create_timer(0.5
 	), "timeout")
 	$cutscenes.play("fadein")
@@ -43,6 +50,8 @@ func change_focus(thing=""):
 func _input(event):
 	if event.is_action_pressed("change_focus"):
 		change_focus()
+		
+
 
 func kije_climb():
 	$tawa/soweli.kije_climb(true)

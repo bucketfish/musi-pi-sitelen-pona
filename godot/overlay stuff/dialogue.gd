@@ -73,6 +73,8 @@ func dialogue_loop(cur):
 				display(i[1], i[2], i[3])
 				yield(self, "nextline")
 				
+		if base.pause:
+			yield(base, "unpause")
 		end_turn()
 	end()
 	
