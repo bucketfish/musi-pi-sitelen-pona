@@ -12,6 +12,8 @@ onready var game = get_node("/root/ale")
 
 var state = "choose"
 
+
+
 func _ready():
 	redo_color()
 	_hide()
@@ -35,8 +37,10 @@ func _hide():
 func choose(thing, group):
 	if thing.ijo_id in $anim.get_animation_list() && thing.selected == true:
 		$anim.play(thing.ijo_id)
+		
 	elif thing.ijo_id in $anim.get_animation_list() && thing.selected == false:
 		$anim.play_backwards(thing.ijo_id)
+		persistent._save("nasin")
 	
 	propagate_call("ijo_select", [thing.ijo_id, group, thing.selected])
 	
@@ -65,7 +69,7 @@ func _input(event):
 		
 		
 	if Input.is_action_just_pressed("ui_accept") && game.pause && state=="input":
-		emit_signal("enter")
+		input.emit_signal("enter")
 		
 
 func _pause():

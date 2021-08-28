@@ -5,6 +5,7 @@ extends Node2D
 onready var mod = $Sprite2
 onready var back = $"../../CanvasLayer/back"
 onready var line = $Control/Control/LineEdit
+onready var menu = $"../.."
 
 signal color(val)
 signal enter
