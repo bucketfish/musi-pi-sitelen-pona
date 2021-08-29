@@ -1,4 +1,4 @@
-extends TileMap
+extends StaticBody2D
 
 export var id:String
 

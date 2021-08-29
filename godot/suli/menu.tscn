@@ -868,12 +868,15 @@ __meta__ = {
 
 [node name="kasi" parent="." index="1"]
 visible = false
+script = null
 
 [node name="nena" parent="." index="2"]
 visible = false
+script = null
 
 [node name="ma" parent="." index="3"]
 visible = false
+script = null
 
 [node name="lon" parent="." index="4"]
 position = Vector2( -10, -30 )

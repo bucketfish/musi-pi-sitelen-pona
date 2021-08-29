@@ -4,7 +4,7 @@
 [ext_resource path="res://ma/tile.gd" type="Script" id=2]
 [ext_resource path="res://ma/anim.tscn" type="PackedScene" id=3]
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=1]
 0/name = "kasi.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -21,9 +21,8 @@
 0/z_index = 0
 
 [node name="kasi" type="TileMap"]
-modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 0.25, 0.25 )
-tile_set = SubResource( 2 )
+tile_set = SubResource( 1 )
 cell_size = Vector2( 192, 192 )
 collision_layer = 0
 collision_mask = 0

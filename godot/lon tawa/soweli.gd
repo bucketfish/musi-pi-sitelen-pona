@@ -135,8 +135,6 @@ func _physics_process(delta):
 	
 func kije_climb(val):
 	if val == true:
-		$Sprite/kije.visible = true
-		$kije.disabled = false
+		$kijeanim.play("show")
 	else:
-		$Sprite/kije.visible = false
-		$kije.disabled = true
+		$kijeanim.play("hide")

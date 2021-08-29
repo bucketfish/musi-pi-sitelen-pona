@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://tomo/1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://lon tawa/soweli.tscn" type="PackedScene" id=2]
@@ -9,9 +9,87 @@
 [ext_resource path="res://suli/kule.gd" type="Script" id=7]
 [ext_resource path="res://overlay stuff/dialogue.tscn" type="PackedScene" id=8]
 [ext_resource path="res://suli/menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ma/nena long.png" type="Texture" id=10]
+[ext_resource path="res://ma/ma.png" type="Texture" id=11]
+[ext_resource path="res://ma/nena.png" type="Texture" id=12]
 
-[sub_resource type="Animation" id=1]
-resource_name = "fadein"
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 192, 192, 0, 192, 0, 15, 192, 15 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 192, 192, 0, 192, 0, 0, 192, 0 )
+
+[sub_resource type="TileSet" id=3]
+0/name = "nena.png 0"
+0/texture = ExtResource( 12 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 20, 192, 192 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "nena long.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 20, 192, 192 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 192, 192, 0, 192, 0, 0, 192, 0 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "ma.png 0"
+0/texture = ExtResource( 11 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 30, 192, 192 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 4 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="Animation" id=6]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/kule:self_modulate")
@@ -26,9 +104,9 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
 [node name="ale" type="Node2D" groups=[
 "color",
@@ -41,12 +119,14 @@ script = ExtResource( 4 )
 
 [node name="nena" parent="tomo" index="2"]
 modulate = Color( 0, 0, 0, 1 )
+tile_set = SubResource( 3 )
 
 [node name="anim" parent="tomo/nena" index="0"]
 root_node = NodePath(".")
 
 [node name="ma" parent="tomo" index="3"]
 modulate = Color( 0, 0, 0, 1 )
+tile_set = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 37.8281, 511.836 )
@@ -75,7 +155,7 @@ script = ExtResource( 6 )
 id = "suno"
 
 [node name="cutscenes" type="AnimationPlayer" parent="."]
-anims/fadein = SubResource( 1 )
+anims/fadein = SubResource( 6 )
 
 [node name="tawa" type="CanvasLayer" parent="."]
 layer = 2
@@ -89,17 +169,17 @@ position = Vector2( -893.302, 445.98 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="AnimationTree" parent="tawa/kije" index="14"]
-parameters/playback = SubResource( 2 )
+parameters/playback = SubResource( 7 )
 
 [node name="soweli" parent="tawa" instance=ExtResource( 2 )]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 238.44, 299.146 )
 
-[node name="RemoteTransform2D" parent="tawa/soweli" index="8"]
+[node name="RemoteTransform2D" parent="tawa/soweli" index="7"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="AnimationTree" parent="tawa/soweli" index="10"]
-parameters/playback = SubResource( 3 )
+[node name="AnimationTree" parent="tawa/soweli" index="9"]
+parameters/playback = SubResource( 8 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 50
@@ -133,5 +213,6 @@ layer = 50
 [editable path="tomo/ijo-kasi"]
 [editable path="tomo/ijo-nena"]
 [editable path="tomo/ijo-kije"]
+[editable path="tomo/ijo-supa"]
 [editable path="tawa/kije"]
 [editable path="tawa/soweli"]

@@ -15,8 +15,6 @@ func _ready():
 	
 func _on_body_entered(body):
 	if body.is_in_group("lon tawa"):
-		emit_signal("jo", ijo_id)
-		
 		selected = !selected
 
 		get_parent().choose(self, ijo_group)
@@ -25,7 +23,6 @@ func _on_body_entered(body):
 		
 		#queue_free()
 func ijo_select(thing, group, val):
-
 
 	if group == ijo_group:
 		if thing == ijo_id && val:

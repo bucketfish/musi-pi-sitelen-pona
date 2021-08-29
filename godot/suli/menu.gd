@@ -25,6 +25,7 @@ func redo_color():
 	#persistent.set_color(line)
 
 func _show():
+	#print("AAAA")
 	visible = true
 	background.visible = true
 	soweli.position.x = 150.085

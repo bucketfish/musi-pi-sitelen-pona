@@ -1,5 +1,8 @@
 extends Node
 
+signal finish_load
+signal finish_save
+
 var sona = {
 	"jo": [],
 	"supa": "",
