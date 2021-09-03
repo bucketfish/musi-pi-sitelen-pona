@@ -37,25 +37,25 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=4]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
 
-[sub_resource type="AnimationNodeStateMachine" id=10]
-states/idle/node = SubResource( 6 )
+[sub_resource type="AnimationNodeStateMachine" id=8]
+states/idle/node = SubResource( 4 )
 states/idle/position = Vector2( 201.5, 102.5 )
-states/walk/node = SubResource( 7 )
+states/walk/node = SubResource( 5 )
 states/walk/position = Vector2( 401, 89.5 )
-transitions = [ "idle", "walk", SubResource( 8 ), "walk", "idle", SubResource( 9 ) ]
+transitions = [ "idle", "walk", SubResource( 6 ), "walk", "idle", SubResource( 7 ) ]
 start_node = "idle"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
 [node name="soweli" type="KinematicBody2D" groups=[
 "color",
@@ -128,6 +128,6 @@ anims/idle = SubResource( 2 )
 anims/walk = SubResource( 3 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 10 )
+tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 11 )
+parameters/playback = SubResource( 9 )

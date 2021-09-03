@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ma/kasi.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ma/lon.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://tomo/tomo.gd" type="Script" id=6]
 [ext_resource path="res://ma/tile.gd" type="Script" id=7]
 [ext_resource path="res://ma/anim.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ante/camera_constraints.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 192, 192, 0, 192, 0, 15, 192, 15 )
@@ -85,7 +86,9 @@ points = PoolVector2Array( 192, 192, 0, 192, 0, 0, 192, 0 )
 } ]
 0/z_index = 0
 
-[node name="tomo" type="Node2D"]
+[node name="tomo" type="Node2D" groups=[
+"tomo",
+]]
 script = ExtResource( 6 )
 
 [node name="kasi" parent="." instance=ExtResource( 1 )]
@@ -114,3 +117,10 @@ script = ExtResource( 7 )
 id = "ma"
 
 [node name="lon" parent="." instance=ExtResource( 2 )]
+
+[node name="Node2D" type="Node" parent="."]
+script = ExtResource( 9 )
+
+[node name="topleft" type="Position2D" parent="Node2D"]
+
+[node name="bottomright" type="Position2D" parent="Node2D"]

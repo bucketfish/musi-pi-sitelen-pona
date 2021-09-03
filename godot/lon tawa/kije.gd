@@ -15,7 +15,7 @@ func _ready():
 	connect("climb", get_parent().get_parent(), "kije_climb")
 	inertia = 10
 	init_jo()
-	$RemoteTransform2D.remote_path = "/root/ale/Camera2D"
+	$RemoteTransform2D.remote_path = "/root/ale/camera"
 	
 func init_jo():
 	if !(scene_id in persistent.sona["jo"]):

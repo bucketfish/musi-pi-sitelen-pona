@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://tomo/1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://lon tawa/soweli.tscn" type="PackedScene" id=2]
@@ -90,7 +90,9 @@ points = PoolVector2Array( 192, 192, 0, 192, 0, 0, 192, 0 )
 0/z_index = 0
 
 [sub_resource type="Animation" id=6]
-length = 0.2
+resource_name = "fade"
+length = 0.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("CanvasLayer/kule:self_modulate")
 tracks/0/interp = 1
@@ -98,11 +100,14 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( -0.000906421, 0.2 ),
+"times": PoolRealArray( 0, 0.25 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+
+[sub_resource type="Animation" id=9]
+resource_name = "fade"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=7]
 
@@ -128,11 +133,12 @@ root_node = NodePath(".")
 modulate = Color( 0, 0, 0, 1 )
 tile_set = SubResource( 5 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="camera" type="Camera2D" parent="."]
 position = Vector2( 37.8281, 511.836 )
 offset = Vector2( 0, -100 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
+limit_smoothed = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 10.0
@@ -140,13 +146,13 @@ drag_margin_left = 0.5
 drag_margin_right = 0.5
 drag_margin_bottom = 0.0
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="camera"]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="camera/ParallaxBackground"]
 motion_scale = Vector2( 0.05, 0 )
 motion_offset = Vector2( 0, -350 )
 
-[node name="suno" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+[node name="suno" type="Sprite" parent="camera/ParallaxBackground/ParallaxLayer"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 2.1604, 164.331 )
 scale = Vector2( 0.5, 0.5 )
@@ -155,7 +161,10 @@ script = ExtResource( 6 )
 id = "suno"
 
 [node name="cutscenes" type="AnimationPlayer" parent="."]
-anims/fadein = SubResource( 6 )
+anims/fade = SubResource( 6 )
+
+[node name="changeanim" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 9 )
 
 [node name="tawa" type="CanvasLayer" parent="."]
 layer = 2
@@ -163,7 +172,7 @@ follow_viewport_enable = true
 
 [node name="kije" parent="tawa" instance=ExtResource( 5 )]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -893.302, 445.98 )
+position = Vector2( -997.369, 249.654 )
 
 [node name="RemoteTransform2D" parent="tawa/kije" index="12"]
 remote_path = NodePath("../../Camera2D")
@@ -173,9 +182,9 @@ parameters/playback = SubResource( 7 )
 
 [node name="soweli" parent="tawa" instance=ExtResource( 2 )]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 238.44, 299.146 )
+position = Vector2( 20.9042, 279.642 )
 
-[node name="RemoteTransform2D" parent="tawa/soweli" index="7"]
+[node name="RemoteTransform2D" parent="tawa/soweli" index="8"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="AnimationTree" parent="tawa/soweli" index="10"]
@@ -187,9 +196,8 @@ layer = 50
 [node name="kule" type="ColorRect" parent="CanvasLayer" groups=[
 "color-inv",
 ]]
-visible = false
 modulate = Color( 1, 1, 1, 0.995488 )
-self_modulate = Color( 1, 1, 1, 0.995488 )
+self_modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 7 )
@@ -214,5 +222,6 @@ layer = 50
 [editable path="tomo/ijo-nena"]
 [editable path="tomo/ijo-kije"]
 [editable path="tomo/ijo-supa"]
+[editable path="tomo/spawn1"]
 [editable path="tawa/kije"]
 [editable path="tawa/soweli"]

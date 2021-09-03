@@ -11,7 +11,7 @@ func _ready():
 		"floor": [$floor1, $floor2, $floor3],
 	}
 	kije_climb(false)
-	$RemoteTransform2D.remote_path = "/root/ale/Camera2D"
+	$RemoteTransform2D.remote_path = "/root/ale/camera"
 
 
 func get_input(delta):

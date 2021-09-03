@@ -1,0 +1,19 @@
+extends Node
+
+onready var camera = get_node("/root/ale/camera")
+onready var topleft = $topleft
+onready var bottomright = $bottomright
+
+export var on = true
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	if on:
+		camera.limit_top = topleft.position.y
+		camera.limit_left = topleft.position.x
+		camera.limit_bottom = bottomright.position.y
+		camera.limit_right = bottomright.position.x

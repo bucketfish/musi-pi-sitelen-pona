@@ -1096,6 +1096,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Node2D" parent="." index="18"]
+on = false
+
 [editable path="ijo-musi"]
 [editable path="ijo-nasin"]
 [editable path="ijo-sona"]
